@@ -438,6 +438,7 @@ class LegoDBApp:
     def clear_tree(self, tree):
         for row in tree.get_children():
             tree.delete(row)
+        tree.yview_moveto(0)
 
     def clear_all(self):
         self.clear_tree(self.main_tree)
