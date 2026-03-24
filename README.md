@@ -1,18 +1,18 @@
-# LEGO DB (Unofficial)
+# LEGO DB
 
-A local SQLite + GUI application for browsing and managing LEGO sets based on Rebrickable data.
+A local SQLite + GUI application for browsing and managing LEGO sets using Rebrickable data.
 
 This project is **not affiliated with the LEGO Group**.
 
 ## Features
 
 - Local SQLite database
-- Search by set number (prefix match)
-- Owned sets management
+- Prefix search by set number
+- Owned set management
 - Condition tracking (0 / 1 / 2)
-- Notes per set
+- Per-set notes
 - Related sets (same theme & year)
-- Multi-language support (Korean / English) | 한국어 / 영어 지원
+- Multi-language support (English / 한국어)
 
 ## Requirements
 
@@ -59,9 +59,7 @@ python legoDB.py
 123
 ```
 
-→ Prefix search for set numbers
-
-Example results:
+Performs prefix matching on set numbers:
 
 ```
 123-1
@@ -72,67 +70,102 @@ Example results:
 ### Owned sets
 
 ```
-보유
 owned
+보유
 ```
 
 With condition filter:
 
 ```
-보유 1
-보유 2
 owned 1
-owned 2
+보유 2
 ```
 
 ## Command Syntax
 
-Input via search box:
+Commands are entered in the search box.
+
+**Basic operations**
 
 ```
-+0000-1		add owned
--0000-1		remove owned
-2>0000-1	change condition
-[note]>0000-1	add note
++0000-1		→ add to owned
+-0000-1		→ remove from owned
+2>0000-1	→ set condition to 2
+[note]>0000-1	→ add note
 ```
 
-Multiple commands allowd:
+Multiple commands can be used in a single input:
 
 ```
-+1234-1 -5678-1 2>1111-1 [gift]>2222-1
++1234-1 -5678-1 2>1234-1 [gift]>1111-1
 ```
-
-## Details
-
-- Condition values:
-  - 0: default (light blue)
-  - 1: bad (light pink)
-  - 2: good (light green)
-- Notes are visible in main table and detail window
-- Copy feature supports normalize option (1234-1 > 1234)
-- Tooltip help available via '?' button
 
 ## Notes
 
+Notes are enclosed in square brackets:
+
+```
+[Note]>1111-1
+```
+
+**Examples**
+
+```
+[2026. 01. 01. Gift]>1111-1
+[2026년 새해 선물]>1111-1
+[!@#$%^&*()]>1111-1
+```
+
+**Escaping special characters**
+
+You can include ``]`` or ``\`` using escape sequences:
+
+```
+[\]]>1234-1	→ ]
+[\\]>1234-1	→ \
+[a\]b]>1234-1	→ a]b
+[a\\b]>1234-1	→ a\b
+```
+
+- Control characters (e.g. newline) are not allowed in notes.
+
+## Details
+
+**Condition values**
+
+- ``0`` — default (light blue)
+- ``1`` — bad (light pink)
+- ``2`` — good (light green)
+
+**Additional behavior**
+
+- Notes are shown in both the main table and detail view
+- Copy feature supports normalization (e.g. ``1234-1 → 1234``)
+- Tooltip help is available via the ? button
+
+## Data
+
 - CSV data is **not included**
-- Users must download data manually
-- Redistribution of dataset is not recommended
+- Users must download data manually from Rebrickable
+- Redistribution of the dataset is not recommended
 
 ## Disclaimer
 
-- LEGO<sup>®</sup> is a trademark of the LEGO Group
-- This project is not affiliated with LEGO Group
-- Data is provided by Rebrickable and not redistributed here
+- LEGO `<sup>`®`</sup>` is a trademark of the LEGO Group
+- This project is not affiliated with the LEGO Group
+- Data is provided by Rebrickable and is not redistributed here
 
 ## AI Usage Disclosure
 
 Some parts of this project were developed with assistance from ChatGPT (OpenAI):
 
 - Code drafting
-- Refactoring & structure improvement
+- Refactoring and structure improvements
 
 All final decisions and modifications were reviewed by the author.
 
 ## License
 
-This project is licensed under the terms of the [GPL-3.0 license](./LICENSE) [(ko-KR)](https://www.olis.or.kr/license/Detailselect.do?lId=1072). See the LICENSE file for details.
+This project is licensed under the terms of the GPL-3.0 License.
+
+See the [LICENSE](./LICENSE) ([ko-KR](https://www.olis.or.kr/license/Detailselect.do?lId=1072)) file for details.
