@@ -104,6 +104,8 @@ class LegoDBApp:
         self.search_entry.bind("<Down>", self.move_cursor_end)
         self.search_entry.bind("<Home>", self.move_cursor_start)
         self.search_entry.bind("<End>", self.move_cursor_end)
+        self.search_entry.bind("<Return>", lambda event: self.search())
+        self.search_entry.focus_set()
 
         tk.Button(top, text=t("search"), command=self.search).pack(side="left", padx=4)
         tk.Button(top, text=t("modify"), command=self.modify_owned_from_entry).pack(side="left", padx=4)
