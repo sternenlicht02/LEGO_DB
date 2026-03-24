@@ -100,6 +100,11 @@ class LegoDBApp:
         self.search_entry = tk.Entry(top, textvariable=self.search_var)
         self.search_entry.pack(side="left", fill="x", expand=True)
 
+        self.search_entry.bind("<Up>", self.move_cursor_start)
+        self.search_entry.bind("<Down>", self.move_cursor_end)
+        self.search_entry.bind("<Home>", self.move_cursor_start)
+        self.search_entry.bind("<End>", self.move_cursor_end)
+
         tk.Button(top, text=t("search"), command=self.search).pack(side="left", padx=4)
         tk.Button(top, text=t("modify"), command=self.modify_owned_from_entry).pack(side="left", padx=4)
         tk.Button(top, text=t("detail"), command=self.show_detail).pack(side="left", padx=4)
@@ -308,6 +313,14 @@ class LegoDBApp:
             )
 
         return len(rows)
+    
+    def move_cursor_start(self, event=None):
+        self.search_entry.icursor(0)
+        return "break"
+
+    def move_cursor_end(self, event=None):
+        self.search_entry.icursor(tk.END)
+        return "break"
 
     # =========================
     # DETAIL
@@ -586,7 +599,7 @@ class LegoDBApp:
 
         text = self.search_var.get().strip()
 
-        if not re.fullmatch(r"[0-9+\-\[\] >a-zA-Z가-힣]+", text):
+        if not re.fullmatch(r"[^\x00-\x1F]+", text):
             self.set_status(t("modify_fail"))
             self.search_var.set("")
             self.search_entry.focus()
@@ -597,7 +610,10 @@ class LegoDBApp:
     def modify_owned(self, text):
 
         token_pattern = re.compile(
-            r"\[[^\]]*\]>\d+(?:-\d+)?|\+[0-9]+(?:-[0-9]+)?|\-[0-9]+(?:-[0-9]+)?|[012]>[0-9]+(?:-[0-9]+)?"
+            r"\[(?:\\.|[^\]])*\]>\d+(?:-\d+)?"
+            r"|\+[0-9]+(?:-[0-9]+)?"
+            r"|\-[0-9]+(?:-[0-9]+)?"
+            r"|[012]>[0-9]+(?:-[0-9]+)?"
         )
 
         tokens = token_pattern.findall(text)
@@ -610,7 +626,10 @@ class LegoDBApp:
         add_re = re.compile(r"^\+[0-9]+(?:-[0-9]+)?$")
         rem_re = re.compile(r"^\-[0-9]+(?:-[0-9]+)?$")
         cond_re = re.compile(r"^[012]>[0-9]+(?:-[0-9]+)?$")
-        note_re = re.compile(r"^\[(.*?)\]>([0-9]+(?:-[0-9]+)?)$")
+        note_re = re.compile(r"^\[((?:\\.|[^\]])*)\]>([0-9]+(?:-[0-9]+)?)$")
+
+        def _unescape_note(text):
+            return re.sub(r"\\(.)", r"\1", text)
 
         for tkn in tokens:
 
@@ -630,7 +649,7 @@ class LegoDBApp:
 
             m = note_re.match(tkn)
             if m:
-                note_text = m.group(1)
+                note_text = _unescape_note(m.group(1))
                 set_num = m.group(2)
                 notes.append((set_num, note_text))
                 continue
