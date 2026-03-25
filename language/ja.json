@@ -1,0 +1,34 @@
+{
+  "search": "検索",
+  "modify": "変更",
+  "detail": "詳細",
+  "copy": "コピー",
+
+  "note": "メモ",
+
+  "main_info": "基本情報",
+  "sub_info": "関連情報",
+
+  "set_num": "セット番号",
+  "parent_theme": "親テーマ",
+  "theme": "テーマ",
+  "name": "名前",
+  "pieces": "ピース数",
+  "release": "発売",
+  "condition": "状態",
+
+  "condition_desc": "状態: -(未所持), 0(基本), 1(悪い), 2(良い)",
+
+  "normalize": "正規化",
+
+  "copied": "コピー完了",
+  "no_selection": "セット未選択",
+  "no_data": "データなし",
+
+  "modify_fail": "変更失敗",
+  "modify_partial": "一部変更",
+  "modify_done": "変更完了",
+
+  "searching": "検索中...",
+  "result_count": "件見つかりました"
+}

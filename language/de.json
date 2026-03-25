@@ -1,0 +1,34 @@
+{
+  "search": "Suchen",
+  "modify": "Ändern",
+  "detail": "Details",
+  "copy": "Kopieren",
+
+  "note": "Notiz",
+
+  "main_info": "Hauptinfo",
+  "sub_info": "Info",
+
+  "set_num": "Set-Nummer",
+  "parent_theme": "Oberthema",
+  "theme": "Thema",
+  "name": "Name",
+  "pieces": "Teile",
+  "release": "Ersch.",
+  "condition": "Zustand",
+
+  "condition_desc": "Zustand: -(Nicht besessen), 0(Standard), 1(Schlecht), 2(Gut)",
+
+  "normalize": "Normalisieren",
+
+  "copied": "Kopiert",
+  "no_selection": "Kein Set gewählt",
+  "no_data": "Keine Daten",
+
+  "modify_fail": "Ändern fehlgeschlagen",
+  "modify_partial": "Teilweise geändert",
+  "modify_done": "Änderung fertig",
+
+  "searching": "Suche...",
+  "result_count": " Ergebnisse"
+}

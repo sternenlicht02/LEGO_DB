@@ -1,0 +1,34 @@
+{
+  "search": "Cari",
+  "modify": "Ubah",
+  "detail": "Detail",
+  "copy": "Salin",
+
+  "note": "Catatan",
+
+  "main_info": "Info utama",
+  "sub_info": "Info terkait",
+
+  "set_num": "Nomor set",
+  "parent_theme": "Tema induk",
+  "theme": "Tema",
+  "name": "Nama",
+  "pieces": "Bagian",
+  "release": "Rilis",
+  "condition": "Kondisi",
+
+  "condition_desc": "Kondisi: -(Tidak punya), 0(Biasa), 1(Buruk), 2(Baik)",
+
+  "normalize": "Normalisasi",
+
+  "copied": "Tersalin",
+  "no_selection": "Tidak ada set dipilih",
+  "no_data": "Tidak ada data",
+
+  "modify_fail": "Ubah gagal",
+  "modify_partial": "Sebagian diubah",
+  "modify_done": "Perubahan selesai",
+
+  "searching": "Mencari...",
+  "result_count": " hasil"
+}

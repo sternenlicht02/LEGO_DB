@@ -1,0 +1,34 @@
+{
+  "search": "Tìm",
+  "modify": "Đổi",
+  "detail": "Chi tiết",
+  "copy": "Sao chép",
+
+  "note": "Ghi chú",
+
+  "main_info": "Thông tin chính",
+  "sub_info": "Thông tin liên quan",
+
+  "set_num": "Số set",
+  "parent_theme": "Chủ đề cha",
+  "theme": "Chủ đề",
+  "name": "Tên",
+  "pieces": "Mảnh",
+  "release": "Phát hành",
+  "condition": "Trạng thái",
+
+  "condition_desc": "Trạng thái: -(Chưa có), 0(Mặc định), 1(Xấu), 2(Tốt)",
+
+  "normalize": "Chuẩn hóa",
+
+  "copied": "Đã sao chép",
+  "no_selection": "Chưa chọn set nào",
+  "no_data": "Không có dữ liệu",
+
+  "modify_fail": "Đổi thất bại",
+  "modify_partial": "Đổi một phần",
+  "modify_done": "Đã đổi xong",
+
+  "searching": "Đang tìm...",
+  "result_count": " kết quả"
+}

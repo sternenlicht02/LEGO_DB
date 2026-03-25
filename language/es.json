@@ -1,0 +1,34 @@
+{
+  "search": "Buscar",
+  "modify": "Cambiar",
+  "detail": "Detalle",
+  "copy": "Copiar",
+
+  "note": "Nota",
+
+  "main_info": "Info base",
+  "sub_info": "Info ligada",
+
+  "set_num": "Nº set",
+  "parent_theme": "Tema padre",
+  "theme": "Tema",
+  "name": "Nombre",
+  "pieces": "Piezas",
+  "release": "Lanz.",
+  "condition": "Estado",
+
+  "condition_desc": "Estado: -(Sin tener), 0(Base), 1(Malo), 2(Bueno)",
+
+  "normalize": "Normalizar",
+
+  "copied": "Copiado",
+  "no_selection": "Ningún set seleccionado",
+  "no_data": "Sin datos",
+
+  "modify_fail": "Cambio fallido",
+  "modify_partial": "Cambio parcial",
+  "modify_done": "Cambio completo",
+
+  "searching": "Buscando...",
+  "result_count": " resultados"
+}

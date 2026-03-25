@@ -1,0 +1,34 @@
+{
+  "search": "تلاش",
+  "modify": "تبدیل",
+  "detail": "تفصیل",
+  "copy": "کاپی",
+
+  "note": "نوٹ",
+
+  "main_info": "بنیادی معلومات",
+  "sub_info": "متعلقہ معلومات",
+
+  "set_num": "سیٹ نمبر",
+  "parent_theme": "اوپری تھیم",
+  "theme": "تھیم",
+  "name": "نام",
+  "pieces": "حصے",
+  "release": "ریلیز",
+  "condition": "حالت",
+
+  "condition_desc": "حالت: -(موجود نہیں), 0(بنیادی), 1(خراب), 2(اچھی)",
+
+  "normalize": "معمول",
+
+  "copied": "کاپی ہوگیا",
+  "no_selection": "کوئی سیٹ منتخب نہیں",
+  "no_data": "کوئی ڈیٹا نہیں",
+
+  "modify_fail": "تبدیلی ناکام",
+  "modify_partial": "جزوی تبدیلی",
+  "modify_done": "تبدیلی مکمل",
+
+  "searching": "تلاش جاری ہے...",
+  "result_count": " نتائج"
+}

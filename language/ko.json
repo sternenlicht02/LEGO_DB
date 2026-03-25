@@ -1,0 +1,34 @@
+{
+  "search": "검색",
+  "modify": "변경",
+  "detail": "상세",
+  "copy": "복사",
+
+  "note": "메모",
+
+  "main_info": "기본 정보",
+  "sub_info": "관련 정보",
+
+  "set_num": "세트 번호",
+  "parent_theme": "상위 테마",
+  "theme": "테마",
+  "name": "이름",
+  "pieces": "부품 수",
+  "release": "출시",
+  "condition": "상태",
+
+  "condition_desc": "상태: -(미보유), 0(기본), 1(나쁨), 2(좋음)",
+
+  "normalize": "정규화",
+
+  "copied": "복사 완료",
+  "no_selection": "선택된 세트 없음",
+  "no_data": "데이터 없음",
+
+  "modify_fail": "변경 실패",
+  "modify_partial": "일부 변경됨",
+  "modify_done": "변경 완료",
+
+  "searching": "검색 중...",
+  "result_count": "건 검색됨"
+}

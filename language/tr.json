@@ -1,0 +1,34 @@
+{
+  "search": "Ara",
+  "modify": "Değiştir",
+  "detail": "Ayrıntı",
+  "copy": "Kopyala",
+
+  "note": "Not",
+
+  "main_info": "Ana bilgi",
+  "sub_info": "İlgili bilgi",
+
+  "set_num": "Set no",
+  "parent_theme": "Üst tema",
+  "theme": "Tema",
+  "name": "Ad",
+  "pieces": "Parça",
+  "release": "Çıkış",
+  "condition": "Durum",
+
+  "condition_desc": "Durum: -(Yok), 0(Temel), 1(Kötü), 2(İyi)",
+
+  "normalize": "Düzelt",
+
+  "copied": "Kopyalandı",
+  "no_selection": "Set seçilmedi",
+  "no_data": "Veri yok",
+
+  "modify_fail": "Değişim başarısız",
+  "modify_partial": "Kısmen değişti",
+  "modify_done": "Değişim tamamlandı",
+
+  "searching": "Aranıyor...",
+  "result_count": " sonuç"
+}
