@@ -20,6 +20,7 @@
   "condition_desc": "Durum: -(Yok), 0(Temel), 1(Kötü), 2(İyi)",
 
   "normalize": "Düzelt",
+  "close": "Kapat",
 
   "copied": "Kopyalandı",
   "no_selection": "Set seçilmedi",

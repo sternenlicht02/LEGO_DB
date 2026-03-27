@@ -20,6 +20,7 @@
   "condition_desc": "Kondisi: -(Tidak punya), 0(Biasa), 1(Buruk), 2(Baik)",
 
   "normalize": "Normalisasi",
+  "close": "Tutup",
 
   "copied": "Tersalin",
   "no_selection": "Tidak ada set dipilih",

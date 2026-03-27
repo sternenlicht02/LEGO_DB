@@ -20,6 +20,7 @@
   "condition_desc": "状態: -(未所持), 0(基本), 1(悪い), 2(良い)",
 
   "normalize": "正規化",
+  "close": "閉じる",
 
   "copied": "コピー完了",
   "no_selection": "セット未選択",

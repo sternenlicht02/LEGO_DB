@@ -20,6 +20,7 @@
   "condition_desc": "状态：-(未拥有)、0(默认)、1(差)、2(好)",
 
   "normalize": "标准化",
+  "close": "关闭",
 
   "copied": "已拷贝",
   "no_selection": "未选套装",

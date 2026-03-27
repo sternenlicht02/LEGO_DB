@@ -20,6 +20,7 @@
   "condition_desc": "Trạng thái: -(Chưa có), 0(Mặc định), 1(Xấu), 2(Tốt)",
 
   "normalize": "Chuẩn hóa",
+  "close": "Đóng",
 
   "copied": "Đã sao chép",
   "no_selection": "Chưa chọn set nào",

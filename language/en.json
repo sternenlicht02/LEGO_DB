@@ -20,6 +20,7 @@
   "condition_desc": "Condition: -(Not Owned), 0(Default), 1(Bad), 2(Good)",
 
   "normalize": "Normalize",
+  "close": "Close",
 
   "copied": "Copied",
   "no_selection": "No set selected",

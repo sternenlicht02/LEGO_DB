@@ -20,6 +20,7 @@
   "condition_desc": "État : -(Non possédé), 0(Base), 1(Mauvais), 2(Bon)",
 
   "normalize": "Normaliser",
+  "close": "Fermer",
 
   "copied": "Copié",
   "no_selection": "Aucun set sélectionné",

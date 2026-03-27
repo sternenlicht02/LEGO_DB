@@ -20,6 +20,7 @@
   "condition_desc": "Zustand: -(Nicht besessen), 0(Standard), 1(Schlecht), 2(Gut)",
 
   "normalize": "Normalisieren",
+  "close": "Schließen",
 
   "copied": "Kopiert",
   "no_selection": "Kein Set gewählt",

@@ -20,6 +20,7 @@
   "condition_desc": "상태: -(미보유), 0(기본), 1(나쁨), 2(좋음)",
 
   "normalize": "정규화",
+  "close": "닫기",
 
   "copied": "복사 완료",
   "no_selection": "선택된 세트 없음",

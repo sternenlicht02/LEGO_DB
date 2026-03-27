@@ -20,6 +20,7 @@
   "condition_desc": "狀態：-(未擁有)、0(預設)、1(差)、2(好)",
 
   "normalize": "標準化",
+  "close": "關閉",
 
   "copied": "已複製",
   "no_selection": "未選套裝",
