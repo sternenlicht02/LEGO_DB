@@ -7,12 +7,12 @@ This project is **not affiliated with the LEGO Group**.
 ## Features
 
 - Local SQLite database
-- Prefix search by set number
+- Prefix search by set numbers
 - Owned set management
 - Condition tracking (0 / 1 / 2)
-- Per-set notes
+- Notes per set
 - Related sets (same theme & year)
-- Multi-language support (English / 한국어)
+- Multi-language support (default: English)
 
 ## Requirements
 
@@ -33,7 +33,7 @@ Required files:
 - themes.csv
 - sets.csv
 
-Place them in:
+Place them in the following directory:
 
 ```
 csv/
@@ -51,6 +51,11 @@ python makeLegoDB.py
 python legoDB.py
 ```
 
+On first run:
+
+- A language selection window will appear
+- The selected language is saved in ``config.json``
+
 ## Usage
 
 ### Basic search
@@ -59,7 +64,7 @@ python legoDB.py
 123
 ```
 
-Performs prefix matching on set numbers:
+Performs prefix matching for set numbers:
 
 ```
 123-1
@@ -71,14 +76,13 @@ Performs prefix matching on set numbers:
 
 ```
 owned
-보유
 ```
 
-With condition filter:
+With a condition filter:
 
 ```
 owned 1
-보유 2
+owned 2
 ```
 
 ## Command Syntax
@@ -100,6 +104,8 @@ Multiple commands can be used in a single input:
 +1234-1 -5678-1 2>1234-1 [gift]>1111-1
 ```
 
+- Invalid tokens are ignored but marked as partial success
+
 ## Notes
 
 Notes are enclosed in square brackets:
@@ -112,7 +118,6 @@ Notes are enclosed in square brackets:
 
 ```
 [2026. 01. 01. Gift]>1111-1
-[2026년 새해 선물]>1111-1
 [!@#$%^&*()]>1111-1
 ```
 
@@ -128,6 +133,7 @@ You can include ``]`` or ``\`` using escape sequences:
 ```
 
 - Control characters (e.g. newline) are not allowed in notes.
+- Invalid input results in a ``modify_fail`` error
 
 ## Details
 
@@ -137,11 +143,29 @@ You can include ``]`` or ``\`` using escape sequences:
 - ``1`` — bad (light pink)
 - ``2`` — good (light green)
 
-**Additional behavior**
+**UI behavior**
 
-- Notes are shown in both the main table and detail view
-- Copy feature supports normalization (e.g. ``1234-1 → 1234``)
-- Tooltip help is available via the ? button
+- Selecting a set automatically updates related sets
+- Double-click opens detail window
+- Last selected table (main / related) is tracked for actions
+
+**Detail window**
+
+- Displays full set information
+- The copy feature supports normalization (e.g. ``1234-1 → 1234``)
+
+**Clipboard**
+
+Two modes:
+
+- Quick copy button
+- Copy from the detail window (with normalization toggle)
+
+Output format:
+
+```
+<parent_theme> <theme> <set_num> <name>, <pieces>pc, <year>
+```
 
 ## Data
 
@@ -151,7 +175,7 @@ You can include ``]`` or ``\`` using escape sequences:
 
 ## Disclaimer
 
-- LEGO `<sup>`®`</sup>` is a trademark of the LEGO Group
+- LEGO<sup>®</sup> is a trademark of the LEGO Group
 - This project is not affiliated with the LEGO Group
 - Data is provided by Rebrickable and is not redistributed here
 
@@ -161,6 +185,7 @@ Some parts of this project were developed with assistance from ChatGPT (OpenAI):
 
 - Code drafting
 - Refactoring and structure improvements
+- translations
 
 All final decisions and modifications were reviewed by the author.
 
