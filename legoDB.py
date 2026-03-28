@@ -193,6 +193,14 @@ def normalize_setnum(set_num: str) -> str:
     return match.group(1)
 
 
+def escape_like_pattern(text: str) -> str:
+    return (
+        text.replace("\\", "\\\\")
+        .replace("%", "\\%")
+        .replace("_", "\\_")
+    )
+
+
 def condition_tag(condition: Optional[str]) -> str:
     if condition is None:
         return ""
@@ -483,10 +491,10 @@ class LegoRepository:
             LEFT JOIN themes t ON s.theme_id = t.id
             LEFT JOIN themes pt ON t.parent_id = pt.id
             LEFT JOIN owned_sets o ON o.set_num = s.set_num
-            WHERE s.set_num LIKE ?
+            WHERE s.set_num LIKE ? ESCAPE '\\'
             ORDER BY {setnum_order_sql('s.set_num')}
             """,
-            (f"{prefix}%",),
+            (f"{escape_like_pattern(prefix)}%",),
         )
 
     def search_owned(self, condition: Optional[str] = None) -> list[SetRow]:
@@ -499,9 +507,13 @@ class LegoRepository:
             LEFT JOIN themes pt ON t.parent_id = pt.id
         """
         params: tuple[object, ...] = ()
-        if condition in {"0", "1", "2"}:
+        if condition is None:
+            pass
+        elif condition in {"0", "1", "2"}:
             query += " WHERE o.condition = ?"
             params = (condition,)
+        else:
+            return []
         query += f" ORDER BY {setnum_order_sql('s.set_num')}"
         return self._fetch_set_rows(query, params)
 
@@ -692,11 +704,11 @@ class LegoDBApp:
                 "parent_theme": 90,
                 "theme": 110,
                 "set_num": 80,
-                "name": 260,
+                "name": 240,
                 "pieces": 50,
                 "year": 50,
                 "condition": 55,
-                "note": 100,
+                "note": 120,
             },
             stretch={"name", "note"},
             height=12,
