@@ -1,15 +1,22 @@
 # LEGO_DB
 
-A lightweight local database tool for managing LEGO sets.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e18d5154-d7e4-4e9e-87e6-845ff3e10b3f" width="800">
+</p>
 
-LEGO_DB allows users to build a local SQLite database from the Rebrickable dataset and manage their owned LEGO sets through a GUI or command-line utilities.
+<p align="center">
+A lightweight local database tool for managing LEGO sets.
+</p>
+
+---
+
+**LEGO_DB** is a lightweight Python application that builds a **local SQLite database** from the Rebrickable dataset and allows users to manage their **owned LEGO sets** through a GUI or command-line style input.
 
 This project is **not affiliated with the LEGO Group**.
 
-Latest release: v1.2.0
-
 ![Python](https://img.shields.io/badge/python-3.8+-blue)
 ![License](https://img.shields.io/badge/license-GPL--3.0-green)
+![GitHub release](https://img.shields.io/github/v/release/sternenlicht02/LEGO_DB)
 
 ## Features
 
@@ -18,14 +25,14 @@ Latest release: v1.2.0
 * Owned set management
 * Condition tracking
 * Notes per set
-* Related sets by the same theme and year
-* Copy support with set-number normalization
+* Related sets (same theme and year)
+* Clipboard copy with set-number normalization
 * Multi-language support
-* Export of owned set data to TXT and CSV
+* Export owned data to TXT and CSV
 
 ## Requirements
 
-* Python 3.8+
+* Python **3.8+**
 
 ## Installation
 
@@ -37,50 +44,60 @@ https://rebrickable.com/downloads/
 
 Required files:
 
-* themes.csv
-* sets.csv
+```
+themes.csv
+sets.csv
+```
 
-Place them in the following directory:
+Place them in:
 
 ```
 src/
-└ lego_db/
-  └ data/
-    └ csv/
+└─ lego_db/
+   └─ data/
+      └─ csv/
+         ├─ themes.csv
+         └─ sets.csv
 ```
 
-### 2. Build database
+### 2. Build the database
+
+Run the database generation script:
 
 ```
 python scripts/makeLegoDB.py
 ```
 
-### 3. Run application
+This creates the local SQLite database from the CSV files.
 
-You can start the GUI by double-clicking:
+### 3. Run the application
 
-```
-legoDB.pyw
-```
-
-Or run it from the command line:
+Start the GUI:
 
 ```
 python legoDB.pyw
 ```
 
-On first run:
+or simply double-click:
+
+```
+legoDB.pyw
+```
+
+On the first run:
 
 * A language selection window appears
-* The selected language is saved in `config.json`
+* The selected language is saved to `config.json`
 
 ### Optional: install as a package
+
+You can install the project in editable mode:
 
 ```
 pip install -e .
 ```
 
-This makes the package importable as `lego_db` and allows module-style execution such as:
+This allows module-style execution:
 
 ```
 python -m lego_db
@@ -90,13 +107,13 @@ python -m lego_db
 
 ### Search by set number prefix
 
-Type a set-number prefix in the search box:
+Enter a prefix in the search box:
 
 ```
 123
 ```
 
-This matches set numbers such as:
+This matches:
 
 ```
 123-1
@@ -110,7 +127,7 @@ This matches set numbers such as:
 owned
 ```
 
-Filter owned sets by condition:
+Filter by condition:
 
 ```
 owned 0
@@ -120,22 +137,28 @@ owned 2
 
 ### Quick focus shortcut
 
-* Press `/`
+Press:
+
+```
+/
+```
+
+to focus the search box.
 
 ## Commands
 
-Commands are entered directly in the search box.
+Commands are entered directly into the search box.
 
 | Command            | Meaning                           |
 | ------------------ | --------------------------------- |
-| `+0000-1`        | add to owned                      |
-| `-0000-1`        | remove from owned                 |
-| `2>0000-1`       | set condition to 2                |
-| `[note]>0000-1`  | add a note                        |
-| `2[note]>0000-1` | set condition to 2 and add a note |
-| `[note]2>0000-1` | set condition to 2 and add a note |
+| `+0000-1`          | Add set to owned                  |
+| `-0000-1`          | Remove set from owned             |
+| `2>0000-1`         | Set condition to 2                |
+| `[note]>0000-1`    | Add note                          |
+| `2[note]>0000-1`   | Set condition and add note        |
+| `[note]2>0000-1`   | Same as above                     |
 
-Multiple commands can be combined in a single input:
+Multiple commands can be combined:
 
 ```
 +1234-1 -5678-1 2[gift]>1111-1
@@ -143,20 +166,24 @@ Multiple commands can be combined in a single input:
 
 Invalid tokens are ignored.
 
-In the result list, you can use right-click for quick actions:
+### Context menu actions
 
-* Add the selected set to owned
-* Remove the selected set from owned
+In the result list you can **right-click** to:
+
+* Add selected set to owned
+* Remove selected set from owned
 
 ## Notes
 
-Notes are written inside square brackets:
+Notes are written inside square brackets.
+
+Example:
 
 ```
 [Note]>1111-1
 ```
 
-Examples:
+Example notes:
 
 ```
 [2026. 01. 01. Gift]>1111-1
@@ -165,7 +192,7 @@ Examples:
 
 ### Escaping special characters
 
-You can include `]` or `\` in notes by escaping them:
+You can escape `]` or `\` using `\`.
 
 ```
 []]>1234-1 → ]
@@ -174,11 +201,11 @@ You can include `]` or `\` in notes by escaping them:
 [a\b]>1234-1 → a\b
 ```
 
-Control characters such as newline are not allowed in notes.
+Control characters such as newline are not allowed.
 
 ## Set details
 
-Each set can show:
+Each set displays:
 
 * Full set information
 * Theme hierarchy
@@ -188,24 +215,26 @@ Each set can show:
 * Condition
 * Notes
 
-The copy feature supports normalization (for example, `1234-1 → 1234`).
-
 ### Condition values
 
-* `0` — default (light blue)
-* `1` — bad (light pink)
-* `2` — good (light green)
+| Value        | Meaning      | Color        |
+| ------------ | ------------ | ------------ |
+| `0`          | Default      | Light Blue   |
+| `1`          | Bad          | Light Pink   |
+| `2`          | Good         | Light Green  |
 
 ### Related sets
 
-When you select a set, related sets from the same theme and year are shown automatically.
+When a set is selected, related sets from the **same theme and year** are automatically shown.
 
-### Clipboard
+## Clipboard
 
 Two copy modes are available:
 
 * Quick copy button
-* Copy from the detail window, with optional normalization
+* Copy from the detail window
+
+Optional **set-number normalization** is supported.
 
 Example output:
 
@@ -213,24 +242,24 @@ Example output:
 <parent_theme> <theme> <set_num> <name>, <pieces>pc, <year>
 ```
 
-### Export owned data
+## Export owned data
 
-The exporter creates both files in the project directory:
-
-* `owned_export.txt`
-* `owned_export.csv`
-
-Run:
+Export owned sets:
 
 ```
 python scripts/owned_data_exporter.py
 ```
 
-### Import owned data
+Generated files:
 
-You can restore owned set data from a TXT export.
+```
+owned_export.txt
+owned_export.csv
+```
 
-Run:
+## Import owned data
+
+Restore owned set data from a TXT export:
 
 ```
 python scripts/owned_data_importer.py
@@ -239,27 +268,28 @@ python scripts/owned_data_importer.py
 ## Data
 
 * CSV data is **not included** in the repository
-* Users must download dataset files manually from Rebrickable
-* Redistribution of the dataset may violate Rebrickable's terms of use
+* Users must download datasets manually from Rebrickable
+* Redistributing the dataset may violate Rebrickable's terms of use
 
 ## Disclaimer
 
-* LEGO® is a trademark of the LEGO Group
-* This project is not affiliated with the LEGO Group
-* Data is provided by Rebrickable and is not redistributed here
+* **LEGO®** is a trademark of the LEGO Group
+* This project is **not affiliated with the LEGO Group**
+* Data is provided by **Rebrickable** and is not redistributed here
 
 ## AI Usage Disclosure
 
-Some parts of this project were developed with assistance from ChatGPT (OpenAI):
+Some parts of this project were developed with assistance from **ChatGPT (OpenAI)**:
 
 * Code drafting
-* Refactoring and structure improvements
-* Translations
+* Refactoring
+* Structure improvements
+* Translation assistance
 
-All final decisions and modifications were reviewed by the author.
+All final decisions and modifications were reviewed by the project author.
 
 ## License
 
-This project is licensed under the terms of the GPL-3.0 License.
+This project is licensed under the **GPL-3.0 License**.
 
 See the [LICENSE](./LICENSE) ([ko-KR](https://www.olis.or.kr/license/Detailselect.do?lId=1072)) file for details.
