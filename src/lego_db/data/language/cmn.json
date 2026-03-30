@@ -1,0 +1,38 @@
+{
+  "search": "搜索",
+  "modify": "修改",
+  "detail": "详情",
+  "copy": "复制",
+
+  "note": "备注",
+
+  "main_info": "主要信息",
+  "sub_info": "相关信息",
+
+  "set_num": "套装编号",
+  "parent_theme": "上级主题",
+  "theme": "主题",
+  "name": "名称",
+  "pieces": "零件数",
+  "release": "发售",
+  "condition": "状态",
+
+  "add_owned": "加入收藏",
+  "remove_owned": "从收藏移除",
+
+  "condition_desc": "状态：-(未拥有), 0(默认), 1(差), 2(好)",
+
+  "normalize": "标准化",
+  "close": "关闭",
+
+  "copied": "复制完成",
+  "no_selection": "未选中套装",
+  "no_data": "无数据",
+
+  "modify_fail": "修改失败",
+  "modify_partial": "部分修改",
+  "modify_done": "修改完成",
+
+  "searching": "搜索中...",
+  "result_count": "件结果"
+}

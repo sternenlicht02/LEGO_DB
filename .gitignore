@@ -1,0 +1,48 @@
+# =========================
+# Python cache
+# =========================
+__pycache__/
+*.py[cod]
+
+# =========================
+# Build / packaging
+# =========================
+build/
+dist/
+*.egg-info/
+src/lego_db.egg-info/
+
+# =========================
+# Virtual environments
+# =========================
+venv/
+.env/
+
+# =========================
+# Local runtime data
+# =========================
+lego.db
+owned_export.csv
+owned_export.txt
+
+# =========================
+# User configuration
+# =========================
+config.json
+
+# =========================
+# OS generated files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDE / editor
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Python bytecode in subdirs
+# =========================
+*/__pycache__/

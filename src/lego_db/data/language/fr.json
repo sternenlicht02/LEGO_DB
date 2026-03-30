@@ -1,0 +1,38 @@
+{
+  "search": "Rechercher",
+  "modify": "Modifier",
+  "detail": "Détail",
+  "copy": "Copier",
+
+  "note": "Note",
+
+  "main_info": "Infos base",
+  "sub_info": "Infos liées",
+
+  "set_num": "N° set",
+  "parent_theme": "Thème parent",
+  "theme": "Thème",
+  "name": "Nom",
+  "pieces": "Pièces",
+  "release": "Sortie",
+  "condition": "État",
+
+  "add_owned": "Ajouter à la collection",
+  "remove_owned": "Retirer de la collection",
+
+  "condition_desc": "État : -(Non possédé), 0(Base), 1(Mauvais), 2(Bon)",
+
+  "normalize": "Normaliser",
+  "close": "Fermer",
+
+  "copied": "Copié",
+  "no_selection": "Aucun set sélectionné",
+  "no_data": "Aucune donnée",
+
+  "modify_fail": "Échec de modification",
+  "modify_partial": "Partiellement modifié",
+  "modify_done": "Modification terminée",
+
+  "searching": "Recherche...",
+  "result_count": " résultats trouvés"
+}

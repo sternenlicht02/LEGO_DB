@@ -1,0 +1,38 @@
+{
+  "search": "搜尋",
+  "modify": "修改",
+  "detail": "詳情",
+  "copy": "複製",
+
+  "note": "備註",
+
+  "main_info": "主要資訊",
+  "sub_info": "相關資訊",
+
+  "set_num": "套裝編號",
+  "parent_theme": "上級主題",
+  "theme": "主題",
+  "name": "名稱",
+  "pieces": "零件數",
+  "release": "發售",
+  "condition": "狀態",
+
+  "add_owned": "加入收藏",
+  "remove_owned": "從收藏移除",
+
+  "condition_desc": "狀態：-(未擁有)、0(預設)、1(差)、2(好)",
+
+  "normalize": "標準化",
+  "close": "關閉",
+
+  "copied": "已複製",
+  "no_selection": "未選套裝",
+  "no_data": "無資料",
+
+  "modify_fail": "修改失敗",
+  "modify_partial": "部分修改",
+  "modify_done": "修改完成",
+
+  "searching": "搜尋中...",
+  "result_count": " 個結果"
+}

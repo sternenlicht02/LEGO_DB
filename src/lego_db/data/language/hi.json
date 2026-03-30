@@ -1,0 +1,38 @@
+{
+  "search": "खोजें",
+  "modify": "बदलें",
+  "detail": "विवरण",
+  "copy": "कॉपी",
+
+  "note": "नोट",
+
+  "main_info": "मुख्य जानकारी",
+  "sub_info": "संबंधित जानकारी",
+
+  "set_num": "सेट नंबर",
+  "parent_theme": "मुख्य थीम",
+  "theme": "थीम",
+  "name": "नाम",
+  "pieces": "टुकड़े",
+  "release": "रिलीज़",
+  "condition": "स्थिति",
+
+  "add_owned": "संग्रह में जोड़ें",
+  "remove_owned": "संग्रह से हटाएँ",
+
+  "condition_desc": "स्थिति: -(नहीं है), 0(मूल), 1(खराब), 2(अच्छी)",
+
+  "normalize": "सामान्य",
+  "close": "बंद",
+
+  "copied": "कॉपी हो गई",
+  "no_selection": "कोई सेट नहीं चुना",
+  "no_data": "कोई डेटा नहीं",
+
+  "modify_fail": "बदलाव विफल",
+  "modify_partial": "आंशिक बदलाव",
+  "modify_done": "बदलाव पूरा",
+
+  "searching": "खोज रहे हैं...",
+  "result_count": " परिणाम मिले"
+}

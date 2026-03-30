@@ -1,0 +1,38 @@
+{
+  "search": "शोधा",
+  "modify": "बदला",
+  "detail": "तपशील",
+  "copy": "कॉपी",
+
+  "note": "नोंद",
+
+  "main_info": "मुख्य माहिती",
+  "sub_info": "संबंधित माहिती",
+
+  "set_num": "सेट क्रमांक",
+  "parent_theme": "मुख्य थीम",
+  "theme": "थीम",
+  "name": "नाव",
+  "pieces": "तुकडे",
+  "release": "प्रकाशन",
+  "condition": "स्थिती",
+
+  "add_owned": "संग्रहात जोडा",
+  "remove_owned": "संग्रहातून काढा",
+
+  "condition_desc": "स्थिती: -(नाही), 0(मूळ), 1(वाईट), 2(चांगली)",
+
+  "normalize": "सामान्य",
+  "close": "बंद",
+
+  "copied": "कॉपी झाले",
+  "no_selection": "कोणताही सेट निवडलेला नाही",
+  "no_data": "डेटा नाही",
+
+  "modify_fail": "बदल अयशस्वी",
+  "modify_partial": "अंशतः बदलले",
+  "modify_done": "बदल पूर्ण",
+
+  "searching": "शोधत आहे...",
+  "result_count": " परिणाम मिळाले"
+}
