@@ -4,6 +4,8 @@ A local SQLite + GUI application for browsing and managing LEGO sets using Rebri
 
 This project is **not affiliated with the LEGO Group**.
 
+Latest release: v1.2.0
+
 ## Features
 
 - Local SQLite database
