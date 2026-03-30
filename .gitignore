@@ -31,6 +31,11 @@ owned_export.txt
 config.json
 
 # =========================
+# rebrickable dataset
+# =========================
+src/lego_db/data/csv/*.csv
+
+# =========================
 # OS generated files
 # =========================
 .DS_Store
