@@ -1,4 +1,3 @@
-
 # LEGO_DB
 
 A lightweight local database tool for managing LEGO sets.
